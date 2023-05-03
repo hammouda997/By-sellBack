@@ -20,5 +20,12 @@ export class ProductComponent implements OnInit {
       console.log("aaaa")
     });
   }
+  updateProduct(idProduct : number )
+  {
 
+  };
+  deleteProduct( idProduct : number ) 
+  {
+    
+  }
 }
