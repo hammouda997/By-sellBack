@@ -20,6 +20,10 @@ export class ChatService {
   getChatById(id: number): Observable<Chat> {
     return this.http.get<Chat>(`${this.baseUrl}/read/${id}`);
   }
+  getAllChats(): Observable<Chat[]> {
+    return this.http.get<Chat[]>(`${this.baseUrl}/read`);
+  }
+
 
   updateChat(id: number, chat: Chat): Observable<Chat> {
     return this.http.put<Chat>(`${this.baseUrl}/update/${id}`, chat);
