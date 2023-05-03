@@ -1,4 +1,5 @@
-import { PromoCode } from "./promocode";
+import { CodePromo } from "./codePromo";
+
 
 export class User {
     id: number;
@@ -11,7 +12,7 @@ export class User {
     password: string;
     isActive: boolean;
     accountStatus: AccountStatus;
-    promoCode: PromoCode[];
+    promoCode: CodePromo[];
   }
   
   export enum AccountStatus {

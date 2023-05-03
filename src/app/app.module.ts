@@ -182,9 +182,9 @@ const appRoute: Routes = [
   { path: 'edit-user/:id', component: EditUserComponent },
   { path: 'add-user', component: AddUserComponent },
 
-  // { path: 'list-userpromocode', component: LisPromoCodeComponent },
-  // { path: 'edit-userpromocode/:id', component: EditPromoCodeComponent },
-  // { path: 'add-userpromocode', component: AddPromoCodeComponent },
+  { path: 'list-user', component: LisUserComponent },
+  { path: 'edit-user/:id', component: EditUserComponent },
+  { path: 'add-user', component: AddUserComponent },
   ]
 @NgModule({
   declarations: [
