@@ -32,9 +32,6 @@ import { AddClaimComponent } from './component/claim/add-claim/add-claim.compone
 import { EditClientComponent } from './component/client/edit-client/edit-client.component';
 import { AddClientComponent } from './component/client/add-client/add-client.component';
 import { ListClientComponent } from './component/client/list-client/list-client.component';
-import { ListCodepromoComponent } from './component/codePromo/list-codepromo/list-codepromo.component';
-import { AddCodepromoComponent } from './component/codePromo/add-codepromo/add-codepromo.component';
-import { EditCodepromoComponent } from './component/codePromo/edit-codepromo/edit-codepromo.component';
 import { EditCammandLineComponent } from './component/Cammand_line/edit-cammand-line/edit-cammand-line.component';
 import { AddCammandLineComponent } from './component/Cammand_line/add-cammand-line/add-cammand-line.component';
 import { ListCommentComponent } from './component/Comment/list-comment/list-comment.component';
@@ -118,10 +115,7 @@ const appRoute: Routes = [
   { path: 'list-client', component: ListClientComponent },
   { path: 'edit-client/:id', component: EditClientComponent },
 
-  { path: 'list-codepromo', component: EditCodepromoComponent },
-  { path: 'add-codepromo', component: AddCodepromoComponent },
-  { path: 'edit-codepromo/:id', component: EditCodepromoComponent },
-  
+ 
   { path: 'edit-commend-line/:id', component: EditCammandLineComponent },
   { path: 'add-command-line', component: AddCammandLineComponent },
   { path: 'list-command-line', component: ListCammanLineComponent },
@@ -215,9 +209,6 @@ const appRoute: Routes = [
     EditClientComponent,
     AddClientComponent,
     ListClientComponent,
-    ListCodepromoComponent,
-    AddCodepromoComponent,
-    EditCodepromoComponent,
     EditCammandLineComponent,
     EditBblogComponent,
     AddCammandLineComponent,
