@@ -7,27 +7,28 @@ import { Blog } from '../models/blog';
   providedIn: 'root'
 })
 export class BlogService {
+  private baseUrl = 'http://localhost:9000/bns';
 
   constructor(private http: HttpClient) { }
   
     getAllBlogs(): Observable<Blog[]> {
-      return this.http.get<Blog[]>('/Blog/retrieve-all-Blogs');
+      return this.http.get<Blog[]>(`${this.baseUrl}/Blog/retrieve-all-Blogs`);
     }
   
     getBlog(id: number): Observable<Blog> {
-      return this.http.get<Blog>(`/Blog/retrieve-bLog/${id}`);
+      return this.http.get<Blog>(`${this.baseUrl}/Blog/retrieve-bLog/${id}`);
     }
   
     addBlog(blog: Blog): Observable<Blog> {
-      return this.http.post<Blog>('/Blog/add-Blog', blog);
+      return this.http.post<Blog>(`${this.baseUrl}/Blog/add-Blog`, blog);
     }
   
     updateBlog(blog: Blog): Observable<Blog> {
-      return this.http.put<Blog>('/Blog/update-Blog', blog);
+      return this.http.put<Blog>(`${this.baseUrl}/Blog/update-Blog`, blog);
     }
   
     removeBlog(id: number): Observable<void> {
-      return this.http.delete<void>(`/Blog/remove-Blog/${id}`);
+      return this.http.delete<void>(`${this.baseUrl}/Blog/remove-Blog/${id}`);
     }
   }
   

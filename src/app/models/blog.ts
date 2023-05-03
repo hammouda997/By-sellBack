@@ -1,7 +1,7 @@
 export class Blog {
-    id_blog: number;
+    idBlog: number;
     content: string;
-    is_valid: boolean;
-    publication_date: Date;
+    isValid: boolean;
+    publicationDate: Date;
     title: string;
-    supplier_id: number;}
+    supplier: number;}

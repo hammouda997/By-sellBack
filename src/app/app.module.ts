@@ -78,6 +78,9 @@ import { EditUserComponent } from './component/User/edit-user/edit-user.componen
 import { AddUserComponent } from './component/User/add-user/add-user.component';
 import { EditRequestComponent } from './component/Request/edit-request/edit-request.component';
 import { AddRequestComponent } from './component/Request/add-request/add-request.component';
+import { ListCammanLineComponent } from './component/Cammand_line/list-camman-line/list-camman-line.component';
+import { CommonModule } from '@angular/common';
+import { LisRequestComponent } from './component/Request/lis-request/lis-request.component';
 
 
 const appRoute: Routes = [
@@ -98,54 +101,57 @@ const appRoute: Routes = [
   { path:'list-shops' , component : ListShopComponent},
   { path:'add-shops' , component : AddShopComponent},
   { path:'edit-shops/:id' , component : EditShopComponent},
+
   { path: 'list-carts', component: ListCartsComponent },
-
   { path: 'add-carts', component: AddCartsComponent },
-  { path: 'edit-carts', component: EditCartsComponent },
+  { path: 'edit-carts/:id', component: EditCartsComponent },
+
   { path: 'list-chat', component: ListChatComponent },
-
   { path: 'add-chat', component: AddChatComponent },
-  { path: 'edit-chat', component: EditChatComponent },
-  { path: 'edit-claim', component: EditClaimComponent },
+  { path: 'edit-chat/:id', component: EditChatComponent },
 
+  { path: 'edit-claim/:id', component: EditClaimComponent },
   { path: 'add-claim', component: AddClaimComponent },
   { path: 'edit-client', component: EditClientComponent },
+
   { path: 'add-client', component: AddClientComponent },
-
   { path: 'list-client', component: ListClientComponent },
-  { path: 'list-codepromo', component: ListCodepromoComponent },
-  { path: 'add-codepromo', component: AddCodepromoComponent },
+  { path: 'edit-client/:id', component: EditClientComponent },
 
-  { path: 'edit-codepromo', component: EditCodepromoComponent },
-  { path: 'edit-cammand-line', component: EditCammandLineComponent },
-  { path: 'add-cammand-line', component: AddCammandLineComponent },
+  { path: 'list-codepromo', component: EditCodepromoComponent },
+  { path: 'add-codepromo', component: AddCodepromoComponent },
+  { path: 'edit-codepromo/:id', component: EditCodepromoComponent },
+  
+  { path: 'edit-commend-line/:id', component: EditCammandLineComponent },
+  { path: 'add-command-line', component: AddCammandLineComponent },
+  { path: 'list-command-line', component: ListCammanLineComponent },
 
   { path: 'list-comment', component: ListCommentComponent },
-  { path: 'edit-comment', component: EditCommentoComponent },
+  { path: 'edit-comment/:id', component: EditCommentoComponent },
   { path: 'add-comment', component: AddCommentComponent },
 
   { path: 'list-currency', component: ListCurrencyComponent },
-  { path: 'edit-currency', component: EditCurrencyComponent },
+  { path: 'edit-currency/:id', component: EditCurrencyComponent },
   { path: 'add-currency', component: AddCurrencyComponent },
 
   { path: 'list-deliverer', component: ListDelivererComponent },
-  { path: 'edit-deliverer', component: EditDelivererComponent },
+  { path: 'edit-deliverer/:id', component: EditDelivererComponent },
   { path: 'add-deliverer', component: AddDelivererComponent },
 
   { path: 'list-delivery', component: ListDeliveryComponent },
-  { path: 'edit-delivery', component: EditDeliveryComponent },
+  { path: 'edit-delivery/:id', component: EditDeliveryComponent },
   { path: 'add-delivery', component: AddDeliveryComponent },
 
   { path: 'list-favorite', component: ListFavoriteComponent },
-  { path: 'edit-favorite', component: EditFavoriteComponent },
+  { path: 'edit-favorite/:id', component: EditFavoriteComponent },
   { path: 'add-favorite', component: AddFavoriteComponent },
 
   { path: 'list-forum', component: ListForumComponent },
-  { path: 'edit-forum', component: EditForumComponent },
+  { path: 'edit-forum/:id', component: EditForumComponent },
   { path: 'add-forum', component: AddForumComponent },
 
   { path: 'list-offre', component: LisOffreComponent },
-  { path: 'edit-offre', component: EditOffreComponent },
+  { path: 'edit-offre/:id', component: EditOffreComponent },
   { path: 'add-offre', component: AddOffreComponent },
 
   { path: 'list-payment', component: LisPaymentComponent },
@@ -160,7 +166,7 @@ const appRoute: Routes = [
   { path: 'edit-purchaseOrder/:id', component: EditPurchaseOrderComponent },
   { path: 'add-purchaseOrder', component: AddPurchaseOrderComponent },
 
-  { path: 'list-request', component: ListCartsComponent },
+  { path: 'list-request', component: LisRequestComponent },
   { path: 'edit-request/:id', component: EditRequestComponent },
   { path: 'add-request', component: AddRequestComponent },
 
@@ -184,6 +190,7 @@ const appRoute: Routes = [
   declarations: [
     AppComponent,
     NavbarComponent,
+    ListCammanLineComponent,
     SidebarComponent,
     ProductComponent,
     AddProductComponent,
@@ -193,10 +200,10 @@ const appRoute: Routes = [
     EditCategoryComponent,
     EditShopComponent,
     ListShopComponent,
-    AddShopComponent,
-    EditBblogComponent,
-    AddBblogComponent,
     ListBblogComponent,
+    EditShopComponent,
+    AddShopComponent,
+    AddBblogComponent,
     AddCartsComponent,
     EditCartsComponent,
     ListCartsComponent,
@@ -212,6 +219,7 @@ const appRoute: Routes = [
     AddCodepromoComponent,
     EditCodepromoComponent,
     EditCammandLineComponent,
+    EditBblogComponent,
     AddCammandLineComponent,
     ListCommentComponent,
     EditCommentoComponent,
@@ -263,6 +271,7 @@ const appRoute: Routes = [
     RouterModule.forRoot(appRoute),
     FormsModule,
     ReactiveFormsModule,
+    CommonModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
