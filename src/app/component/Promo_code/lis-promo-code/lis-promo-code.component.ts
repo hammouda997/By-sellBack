@@ -11,7 +11,7 @@ import { CodePromoService } from 'src/app/services/code-promo.service';
 export class LisPromoCodeComponent implements OnInit {
 
   promocodes: CodePromo[] = [];
-
+  idCode : number ; 
   constructor(
     private codePromoService: CodePromoService,
     private router: Router
@@ -28,9 +28,9 @@ export class LisPromoCodeComponent implements OnInit {
   }
 
   
-updatePromocode(id : number )
+  updatePromocode(idCode: number )
 {
-  this.router.navigate(['/edit-promocode', id]);
+  this.router.navigate(['/edit-promocode',idCode]);
    
 }
 }

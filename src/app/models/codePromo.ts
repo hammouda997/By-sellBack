@@ -2,7 +2,7 @@ import { Chat } from "./chat";
 
 export class CodePromo
 {
-    id:number ; 
+    idCode: number ; 
     code: string ;
     reduction: number ; 
     dateFin:number ; 

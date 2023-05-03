@@ -21,14 +21,17 @@ export class AddShopComponent {
 
   ngOnInit(): void {
     this.shopForm = this.formBuilder.group({
-      name: ['', Validators.required],
+      name: ['',[ Validators.required , Validators.minLength(4), Validators.maxLength(20)]],
       address: ['', Validators.required],
       photo: ['']
     });
   }
+  get name() { return this.shopForm.get('name'); }
+  get address() { return this.shopForm.get('address'); }
 
   // convenience getter for easy access to form fields
   get f() { return this.shopForm.controls; }
+  
 
   onSubmit() {
     this.submitted = true;

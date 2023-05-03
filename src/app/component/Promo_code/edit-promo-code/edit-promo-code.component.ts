@@ -10,7 +10,7 @@ import { CodePromoService } from 'src/app/services/code-promo.service';
 })
 export class EditPromoCodeComponent implements OnInit {
 
-promocode : CodePromo
+promocode : CodePromo;
   
   constructor(
   private codePromoService: CodePromoService,
@@ -19,17 +19,18 @@ promocode : CodePromo
   ) { }
   
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
+    const id= +this.route.snapshot.paramMap.get('id');
   this.codePromoService.getCodePromoById(id).subscribe(
     (promocode) => {
   this.promocode = promocode;
+  console.log("aaaa" ,promocode )
   },
   error => console.log(error)
   );
   }
   
   onSubmit(): void {
-  this.codePromoService.updateCodePromo(this.promocode.id, this.promocode).subscribe(
+  this.codePromoService.updateCodePromo(this.promocode.idCode, this.promocode).subscribe(
   data => {
   this.router.navigate(['list-promocode']);
   },

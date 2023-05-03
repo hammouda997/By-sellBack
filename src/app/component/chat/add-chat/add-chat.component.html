@@ -17,7 +17,7 @@
           </div>
           <select class="form-control" id="idcode" formControlName="idcode"  [(ngModel)]="idcode">
             <option value="">Choose a code</option>
-            <option *ngFor="let code of codepromoList" [value]="code.id">{{code.code}}</option>
+            <option *ngFor="let code of codepromoList" [value]="code.idCode">{{code.code}}</option>
           </select>
           <button type="submit" class="btn btn-primary" >Submit</button>
         </form>
