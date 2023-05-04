@@ -11,8 +11,8 @@ export class OrderService {
 
   constructor(private http: HttpClient) { }
 
-  addPurchaseOrder(order: PurchaseOrder, idCart: number): Observable<PurchaseOrder> {
-    return this.http.post<PurchaseOrder>(`${this.baseUrl}/addOrder/${idCart}`, order);
+  addPurchaseOrder(order: PurchaseOrder, idCard: number): Observable<PurchaseOrder> {
+    return this.http.post<PurchaseOrder>(`${this.baseUrl}/addOrder/${idCard}`, order);
   }
 
   updatePurchaseOrder(order: PurchaseOrder): Observable<PurchaseOrder> {
