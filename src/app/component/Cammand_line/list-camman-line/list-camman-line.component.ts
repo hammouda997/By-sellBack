@@ -16,11 +16,15 @@ export class ListCammanLineComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCommandLines();
+    
   }
 
   getCommandLines(): void {
     this.commandLineService.getListCommandLine()
-      .subscribe(data => this.commandLines = data);
+      .subscribe(data => 
+        {this.commandLines = data 
+          console.log(data)
+        });
   }
 
   deleteCommandLine(id: number): void {

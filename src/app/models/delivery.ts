@@ -9,11 +9,10 @@ export class Delivery {
     phoneNumber: string;
     deliveryStatus: DeliveryStatus;
     purchaseOrders: PurchaseOrder[];
-    deliverer: Delivery;
+    // deliverer: Delivery;
   }
   export enum DeliveryStatus {
-    PENDING = 'PENDING',
-    IN_TRANSIT = 'IN_TRANSIT',
-    DELIVERED = 'DELIVERED',
-    CANCELED = 'CANCELED'
+    NotStarted = 'NotStarted',
+    InProgress = 'InProgress',
+    Delivered = 'Delivered'
   }
