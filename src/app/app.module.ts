@@ -193,6 +193,7 @@ const appRoute: Routes = [
     AddCategoryComponent,
     EditCategoryComponent,
     EditShopComponent,
+    EditRequestComponent,
     ListShopComponent,
     ListBblogComponent,
     EditShopComponent,
@@ -242,7 +243,7 @@ const appRoute: Routes = [
     LisPurchaseOrderComponent,
     EditPurchaseOrderComponent,
     AddPurchaseOrderComponent,
-
+    LisRequestComponent,
     LisSupplierComponent,
     EditSupplierComponent,
     AddSupplierComponent,
@@ -252,6 +253,7 @@ const appRoute: Routes = [
     LisUserComponent,
     EditUserComponent,
     AddUserComponent,
+    AddRequestComponent
 
     
   ],

@@ -38,4 +38,6 @@ export class OrderService {
   generatePdfReport(): Observable<any> {
     return this.http.get(`${this.baseUrl}/orders/pdf`, { responseType: 'blob' });
   }
+
+  
 }
