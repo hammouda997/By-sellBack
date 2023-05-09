@@ -8,11 +8,19 @@
        
        
           <div class="form-group">
-            <label for="product">Product</label>
-            <select class="form-control" formControlName="product">
-              <option value="">--Select--</option>
-              <option *ngFor="let product of productList" [value]="product.idProduct">{{product.name}}</option>
+            <label for="idProduct">Product</label>
+            <select formControlName="idProduct"  class="form-control" required [(ngModel)]="commandLine.product" name="product.idProduct" >
+              <option value="">Select a product...</option>
+              <option *ngFor="let product of productList" [value]="product.idProduct">{{ product.name }}</option>
             </select>
+          </div>
+          <div class="form-group">
+            <label for="product">Cart</label>
+            <select class="form-control"  formControlName="cart" [(ngModel)]="idCart" name="cart" >
+              <option value="">--Select--</option>
+              <option *ngFor="let cart of cartList" [value]="cart.idCart">{{cart.totalCart}}</option>
+            </select>
+          </div>
             <!-- <div class="alert alert-danger" *ngIf="addCommandLineForm.get('product').invalid && (addCommandLineForm.get('product').dirty || addCommandLineForm.get('product').touched)">
               <div *ngIf="product.errors?.['required']">
                 Product is required.
@@ -21,7 +29,7 @@
           </div> -->
           <div class="form-group">
             <label for="quantity">Quantity</label>
-            <input type="number" class="form-control" formControlName="quantity">
+            <input type="number" class="form-control" formControlName="quantity"  [(ngModel)]="commandLine.quantity" name="quantity">
             <!-- <div class="alert alert-danger" *ngIf="addCommandLineForm.get('quantity').invalid && (addCommandLineForm.get('quantity').dirty || addCommandLineForm.get('quantity').touched)">
               <div *ngIf="quantity.errors?.['required']">
                 Quantity is required.
@@ -33,7 +41,7 @@
           </div>
           <button type="submit" class="btn btn-primary" >Add</button>
       
-      </div>
+    
     </form>
     </div>
   </div>

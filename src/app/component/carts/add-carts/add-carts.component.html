@@ -9,13 +9,7 @@
             <label for="totalCart">Total Cart</label>
             <input type="number" class="form-control" id="totalCart" name="totalCart" [(ngModel)]="cart.totalCart" required>
           </div>
-          <div class="form-group">
-            <label for="produitId">Produit</label>
-            <select class="form-control" id="produitId" name="produitId" [(ngModel)]="produitId">
-              <option value="">Choose a product</option>
-              <option *ngFor="let produit of produitList" [value]="produit.idProduct">{{produit.name}}</option>
-            </select>
-          </div>
+       
           <div class="form-group">
             <label for="quantity">Quantity</label>
             <input type="number" class="form-control" id="quantity" name="quantity" [(ngModel)]="quantity" required>

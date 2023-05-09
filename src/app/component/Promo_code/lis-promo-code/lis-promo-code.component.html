@@ -6,7 +6,7 @@
             <div class="card-header">
         
 <h2>List Promocodes</h2>
-<a routerLink="/add-promocode" class="btn btn-success">Add Chat</a>
+<a routerLink="/add-promocode" class="btn btn-success">Add Code Promo</a>
 
 </div>
 <table class="table">
@@ -22,10 +22,10 @@
     <tr *ngFor="let promocode of promocodes">
       <td>{{ promocode.code }}</td>
       <td>{{ promocode.reduction }}</td>
-      <td>{{ promocode.dateFin }}</td>
+      <td>{{ promocode.dateFin |date: 'dd/MM/yyyy'  }}</td>
       <td>
        <button class="btn btn-primary" (click)="updatePromocode(promocode.idCode)">Edit</button>
-       <!--   <button class="btn btn-danger" (click)="deleteChat(chat.id)" >Delete</button> -->
+         <button class="btn btn-danger" (click)="deletePromocode(promocode.idCode)" >Delete</button>
       </td>
     </tr>
   </tbody>

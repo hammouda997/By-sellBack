@@ -6,5 +6,5 @@ export class Forum {
     content: string ;
     publicationDate: Date;
     client: string;
-    comments : Comment;
+
 }

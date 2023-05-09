@@ -10,8 +10,8 @@ import { CommandeLineService } from 'src/app/services/cammand-line.service';
 })
 export class ListCammanLineComponent implements OnInit {
 
-  commandLines: CommandLine[] = [];
-
+  commandLines: any;
+  Product : any ;
   constructor(private commandLineService: CommandeLineService , private router: Router) { }
 
   ngOnInit(): void {
@@ -23,7 +23,7 @@ export class ListCammanLineComponent implements OnInit {
     this.commandLineService.getListCommandLine()
       .subscribe(data => 
         {this.commandLines = data 
-          console.log(data)
+        console.log(this.commandLines)
         });
   }
 

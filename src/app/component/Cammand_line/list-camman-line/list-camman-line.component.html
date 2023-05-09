@@ -20,8 +20,8 @@
             <tr *ngFor="let commandLine of commandLines">
               <td>{{ commandLine.idCommandeLine }}</td>
               <td>{{ commandLine.quantity }}</td>
-              <!-- <td>{{ commandLine.produit.name }}</td>
-              <td>{{ commandLine.cart.idCart }}</td> -->
+              <td  *ngFor="let product of commandLine.products"> {{ product.name }}</td>
+              <td>{{ commandLine.cart.idCart }}</td> 
               <td>
                 <button class="btn btn-danger" (click)="deleteCommandLine(commandLine.idCommandeLine)">Delete</button>
                 <button class="btn btn-primary" (click)="updateCommandLine(commandLine.idCommandeLine)">Edit</button>

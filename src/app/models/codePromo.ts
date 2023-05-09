@@ -5,7 +5,7 @@ export class CodePromo
     idCode: number ; 
     code: string ;
     reduction: number ; 
-    dateFin:number ; 
+    dateFin: Date ; 
     chat: Chat;
 
 }

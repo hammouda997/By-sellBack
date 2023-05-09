@@ -18,7 +18,7 @@
           <td>{{ comment.idComment }}</td>
           <td>{{ comment.content }}</td>
           <td>{{ comment.createdAt | date }}</td>
-          <td>{{ comment.forum }}</td>
+          <td>{{ comment.forum.title }}</td>
           <td>{{ comment.client }}</td>
           <td>
             <button class="btn btn-primary" (click)="updateCom(comment.idComment)">Edit</button>

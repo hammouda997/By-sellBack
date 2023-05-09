@@ -20,7 +20,9 @@ this.getForums();
 
 getForums(): void {
 this.forumService.getAllForums()
-.subscribe(forums => this.forums = forums);
+.subscribe(forums =>
+  { this.forums = forums
+  console.log(this.forums)});
 }
 
 deleteForum(id: number): void {

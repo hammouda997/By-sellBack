@@ -9,6 +9,10 @@
         <label for="description">Description:</label>
         <textarea class="form-control" id="description" required [(ngModel)]="forum.content" name="description"></textarea>
       </div>
+      <div class="form-group">
+        <label for="publicationDate">Publication Date:</label>
+        <input type="date"  class="form-control" id="publicationDate" required [(ngModel)]="forum.publicationDate" name="description">
+      </div>
       <button type="submit" class="btn btn-primary" [disabled]="!addForumForm.valid">Submit</button>
     </form>
   </div>

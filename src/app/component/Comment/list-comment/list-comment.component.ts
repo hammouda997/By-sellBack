@@ -20,7 +20,10 @@ export class ListCommentComponent {
 
   getComments(): void {
     this.commentService.getAllComments()
-      .subscribe(comments => this.comments = comments);
+      .subscribe(comments => 
+        {this.comments = comments
+          console.log(this.comments); 
+        });
   }
   deleteCom(id: number): void {
     if (confirm("Are you sure you want to delete this comment?")) {

@@ -36,5 +36,7 @@ export class CommentService {
     };
     return this.http.put<Comment>(`${this.baseUrl}/comments/${id}`, comment, httpOptions);
   }
-
+assignCommentToForum(commentId: number, forumId: number): Observable<Comment> {
+  return this.http.post<Comment>(`${this.baseUrl}/${commentId}/forum/${forumId}`, null);
+}
 }

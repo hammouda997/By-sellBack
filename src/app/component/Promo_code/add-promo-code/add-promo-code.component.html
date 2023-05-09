@@ -1,1 +1,17 @@
-<p>add-promo-code works!</p>
+<h1>Add Code Promo</h1>
+
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="code">Code</label>
+    <input type="text" class="form-control"  [(ngModel)]="codePromo.code" name="code">
+  </div>
+  <div class="form-group">
+    <label for="description">Reduction</label>
+    <textarea class="form-control"  [(ngModel)]="codePromo.reduction" name="reduction"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="description">Date Fin</label>
+    <input type="Date" class="form-control" id="dateFin" [(ngModel)]="codePromo.dateFin" name="dateFin">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
